@@ -9,19 +9,37 @@ console.log('App started');
 
 $('.circle-yellow').click(function() {
   $('.circle-yellow').toggleClass('selected');
-  $('.big-circle').removeClass('empty');
-  $('.big-circle').addClass('yellow');
+  if ( $('.circle-yellow').is('.selected') ) {
+    $('.big-circle').removeClass('empty');
+    $('.big-circle').addClass('yellow');
+  }
+  else {
+    $('.big-circle').removeClass('yellow');
+    $('.big-circle').addClass('empty');
+  }
 });
 
 $('.circle-blue').click(function() {
   $('.circle-blue').toggleClass('selected');
-  $('.big-circle').removeClass('empty');
-  $('.big-circle').addClass('blue');
+  if ( $('.circle-blue').is('.selected') ) {
+    $('.big-circle').removeClass('empty');
+    $('.big-circle').addClass('blue');
+  }
+  else {
+    $('.big-circle').removeClass('blue');
+    $('.big-circle').addClass('empty');
+  }
 });
 
 $('.circle-red').click(function() {
   $('.circle-red').toggleClass('selected');
-  $('.big-circle').removeClass('empty');
-  $('.big-circle').addClass('red');
+  if ( $('.circle-red').is('.selected') ) {
+    $('.big-circle').removeClass('empty');
+    $('.big-circle').addClass('red');
+  }
+  else {
+    $('.big-circle').removeClass('red');
+    $('.big-circle').addClass('empty');
+  }
 });
 
