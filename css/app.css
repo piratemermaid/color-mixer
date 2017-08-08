@@ -1,0 +1,95 @@
+body {
+  padding: 50px 0 50px 0;
+  line-height: 20px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.circle-yellow {
+  background: yellow;
+}
+
+.circle-blue {
+  background: blue;
+}
+
+.circle-red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.brown {
+  background: brown;
+}
+
+.selected {
+  border: 2px solid black;
+}
+
+.big-circle {
+  width: 340px;
+  height: 340px;
+  -webkit-border-radius: 170px;
+  -moz-border-radius: 170px;
+  border-radius: 170px;
+  padding-top: 100px;
+}
+
+.empty {
+  background: white;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 39.9375em) {
+  .circle {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    float: left;
+  }
+
+  #circle {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  .big-circle {
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+    margin-top: 30px;
+  }
+}
