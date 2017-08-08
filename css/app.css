@@ -48,14 +48,14 @@ body {
 }
 
 .brown {
-  background: brown;
+  background: #4E2306;
 }
 
 .selected {
   border: 2px solid black;
 }
 
-.big-circle {
+#big-circle {
   width: 340px;
   height: 340px;
   -webkit-border-radius: 170px;
@@ -84,7 +84,7 @@ body {
     padding-bottom: 100px;
   }
 
-  .big-circle {
+  #big-circle {
     width: 250px;
     height: 250px;
     -webkit-border-radius: 150px;
