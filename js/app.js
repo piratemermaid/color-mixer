@@ -10,48 +10,71 @@ $(document).foundation()
 $('.circle-yellow').click(function() {
   $('.circle-yellow').toggleClass('selected');
   if ( $('.circle-yellow').is('.selected') ) {
-    $('#big-circle').removeClass('empty');
     $('#big-circle').addClass('yellow');
     if( $('.circle-red').is('.selected') && !$('.circle-blue').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('orange');
     }
     else if( $('.circle-blue').is('.selected') && !$('.circle-red').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('green');
     }
     else if( $('.circle-blue').is('.selected') && $('.circle-red').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('brown');
     }
   }
   else {
-    $('#big-circle').removeClass('yellow');
+    if ( $('.circle-blue').is('.selected') && $('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('purple');
+    }
+    else if ( $('.circle-blue').is('.selected') && !$('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('blue');
+    }
+    else if ( !$('.circle-blue').is('.selected') && $('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('red');
+    }
+    else {
+      $('#big-circle').removeClass('yellow');
+    }
   }
 });
 
 $('.circle-blue').click(function() {
   $('.circle-blue').toggleClass('selected');
   if ( $('.circle-blue').is('.selected') ) {
-    $('#big-circle').removeClass('empty');
     $('#big-circle').addClass('blue');
     if( $('.circle-yellow').is('.selected') && !$('.circle-red').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('green');
     }
     else if( $('.circle-red').is('.selected') && !$('.circle-yellow').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('purple');
     }
     else if( $('.circle-red').is('.selected') && $('.circle-yellow').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('brown');
     }
   }
   else {
-    $('#big-circle').removeClass('blue');
-    if ( !$('#big-circle').is('yellow') && !$('#big-circle').is('red') ) {
-        $('#big-circle').addClass('empty');
+    if ( $('.circle-yellow').is('.selected') && $('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('orange');
+    }
+    else if ( $('.circle-yellow').is('.selected') && !$('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('yellow');
+    }
+    else if ( !$('.circle-yellow').is('.selected') && $('.circle-red').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('red');
+    }
+    else {
+      $('#big-circle').removeClass('blue');
     }
   }
 });
@@ -59,25 +82,35 @@ $('.circle-blue').click(function() {
 $('.circle-red').click(function() {
   $('.circle-red').toggleClass('selected');
   if ( $('.circle-red').is('.selected') ) {
-    $('#big-circle').removeClass('empty');
     $('#big-circle').addClass('red');
     if( $('.circle-yellow').is('.selected') && !$('.circle-blue').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('orange');
     }
     else if( $('.circle-blue').is('.selected') && !$('.circle-yellow').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('purple');
     }
     else if( $('.circle-blue').is('.selected') && $('.circle-yellow').is('.selected') ) {
-      $('#big-circle').removeClass();
+      clearColors();
       $('#big-circle').addClass('brown');
     }
   }
   else {
-    $('#big-circle').removeClass('red');
-    if ( !$('#big-circle').is('yellow') && !$('#big-circle').is('blue') ) {
-        $('#big-circle').addClass('empty');
+    if ( $('.circle-yellow').is('.selected') && $('.circle-blue').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('green');
+    }
+    else if ( $('.circle-blue').is('.selected') && !$('.circle-yellow').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('blue');
+    }
+    else if ( !$('.circle-blue').is('.selected') && $('.circle-yellow').is('.selected') ) {
+      clearColors();
+      $('#big-circle').addClass('yellow');
+    }
+    else {
+      $('#big-circle').removeClass('red');
     }
   }
 });
@@ -85,13 +118,21 @@ $('.circle-red').click(function() {
 
 
 
-function checkSelected(color) {
-  return color.is('.selected');
-}
+// function checkSelected(color) {
+//   if ((color).is('.selected')) {
+//     return true;
+//   }
+//   else {
+//     return false;
+//   }
+// }
 
-function comboClass(color1, color2, newColor) {
-  $('#big-circle').removeClass(color1);
-  $('#big-circle').removeClass(color2);
-  $('#big-circle').addClass(newColor);
-  console.log(newColor);
+function clearColors() {
+  $('#big-circle').removeClass('red');
+  $('#big-circle').removeClass('blue');
+  $('#big-circle').removeClass('yellow');
+  $('#big-circle').removeClass('green');
+  $('#big-circle').removeClass('purple');
+  $('#big-circle').removeClass('orange');
+  $('#big-circle').removeClass('brown');
 }

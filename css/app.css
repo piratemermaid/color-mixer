@@ -23,6 +23,11 @@ body {
   background: red;
 }
 
+.empty {
+  background: #EDEDED;
+  /*border: 1px solid black;*/
+}
+
 .yellow {
   background: yellow;
 }
@@ -48,7 +53,7 @@ body {
 }
 
 .brown {
-  background: #4E2306;
+  background: #733409;
 }
 
 .selected {
@@ -62,11 +67,6 @@ body {
   -moz-border-radius: 170px;
   border-radius: 170px;
   padding-top: 100px;
-}
-
-.empty {
-  background: white;
-  border: 1px solid black;
 }
 
 @media only screen and (max-width: 39.9375em) {
